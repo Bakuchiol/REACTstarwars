@@ -2,33 +2,48 @@
 import React, { useState, useEffect } from 'react'
 import MainLayout from '../../layout/MainLayout'
 import Film from '../../components/Film'
+import StarSearch from '../../components/StarSearch'
 // api
 import axios from 'axios'
-// images
-import posters from '../../models/posters'
-// style
-import './filmStyle.css';
 
 function FilmList() {
+
   // films
   const [films, setFilms] = useState([])
-  // const posters
-  const [images, setImages] = useState(posters)
+  // const star search
+  // const [searches, setSearches] = useState('')
 
 
   // api axios
   const fetchFilms = async() => {
-    // let movie =[]
-    let data;
-    data = await axios.get(`https://swapi.dev/api/films`);
-    // let info = await responseFilms.data
-    console.log(data.data)
-    setFilms(data.data.results)
+   
+    // old url
+    // https://www.omdbapi.com/?s=star%20wars&apikey=6cfb8a83
+    // https://www.omdbapi.com/?s=${searches}&apikey=6cfb8a83
+
+    // axios
+    const responsePosts = await axios.get(`https://www.omdbapi.com/?s=star%20wars&apikey=6cfb8a83`);
+    let info = await responsePosts.data 
+    console.log("API call",[info])
+
+    if(info.Search){
+      setFilms(info.Search)
+    }
+
+
+    // let data;
+    // data = await axios.get(`https://www.omdbapi.com/?s=star%20wars&apikey=6cfb8a83`);
+    // console.log(data.data)
+    // setFilms(data.data.results)
+
+
   }
   // useEffect
   useEffect(() => {
     fetchFilms()
-  }, [])
+  }, []);
+
+  console.log("films deconstructed::",{films})
 
   const loaded = () => {
     return (
@@ -36,6 +51,14 @@ function FilmList() {
         <hr />
         <h1>FILMS HERE</h1>
         <div id='filmWrapper'>
+          {/* testing */}
+          <div className='filmBox'>
+            {/* <StarSearch searches={searches} setSearches={setSearches}/> */}
+            <Film films={films}/>
+          </div>
+
+          {/* {films} */}
+          {/* <div className='filmLeft'>
           {
             films.map((film, i)=>{
               return <Film key={i}
@@ -44,6 +67,8 @@ function FilmList() {
               // <h1 key={i}>{film.title}</h1>
             })
           }
+          </div> */}
+        <div id="movieDetails">Movie Info Here</div>
         </div>
       </MainLayout>
     )

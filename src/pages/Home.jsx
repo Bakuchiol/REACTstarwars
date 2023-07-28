@@ -4,7 +4,7 @@ import HomePage from '../components/HomePage'
 import homeImgs from '../models/homeImgs'
 import Button from '../components/Button'
 
-console.log(homeImgs)
+// console.log(homeImgs)
 
 function Home() {
   // pics

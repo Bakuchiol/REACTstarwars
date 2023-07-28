@@ -54,11 +54,11 @@ a {
 }
 /* mini logos */
 #miniWrapper{
-  border: solid blue;
+  /* border: solid blue; */
   display: flex;
 }
 .tiktokBox {
-  border: solid orange;
+  /* border: solid orange; */
   display: flex;
   align-items: center;
 }
@@ -66,7 +66,7 @@ a {
   width: 20px;
 }
 .miniLine {
-  border: 1px #f5f5f5;
+  /* border: 1px #f5f5f5; */
   border-style: none none none solid;
   padding-left: 5px;
   height: 25px;
@@ -77,7 +77,7 @@ a {
 
 /* home landing carousel */
 #btnWrapper {
-  border:solid yellow;
+  /* border:solid yellow; */
   width: 100%;
   height: 500px;
   position: absolute;
@@ -86,7 +86,7 @@ a {
   /* top: -50px; */
 }
 .leftBtn{
-  border: solid red;
+  /* border: solid red; */
   display: flex;
   transform: scaleX(-1);
 }
@@ -102,19 +102,35 @@ a {
 /* movie page */
 #filmWrapper{
   border: solid blue;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   flex-wrap: wrap;
 }
-#movieWrapper{
-  display: flex;
-  flex-wrap: wrap;
+.filmBox {
+  overflow-x: auto;
 }
+#movieWrapper{
+  border: solid yellow;
+  /* width: 400px; */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 50px 20px;
+}
+/* #movieDetails {
+  border: solid turquoise;
+  width: 600px;
+} */
 #movieBox{
   border: solid lime;
   border-radius: 15px;
   width: 300px;
   margin: 15px
+}
+.filmLeft{
+  border: solid orangered;
+  width: 400px;
 }
 .movieTitle {
   font-size: 20px;
@@ -122,7 +138,7 @@ a {
 }
 /* footer */
 #footerWrapper{
-  border: solid magenta;
+  /* border: solid magenta; */
   width: 100%;
   text-align: center;
   /* position: fixed; */

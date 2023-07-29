@@ -4,7 +4,7 @@ function HomePage(props) {
   return (
     <div>
       {/* <h1>THIS IS THE HOME PAGE</h1> */}
-      <img src={props.img} alt="images" className='imgSize'/>
+      <img src={props.img[props.count]} alt="images" className='imgSize'/>
     </div>
   )
 }

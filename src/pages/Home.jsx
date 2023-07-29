@@ -8,18 +8,24 @@ import Button from '../components/Button'
 
 function Home() {
   // pics
-  const [currentPic, setCurrentPic] = useState(homeImgs[0]);
+  // const [currentPic, setCurrentPic] = useState(homeImgs[0]);
   // count
   const [count, setCount] = useState(0)
 
   const nextImg = () => {
-    setCount(count +1)
-    setCurrentPic(homeImgs[count])
+    if(count >= (homeImgs.length - 1)){
+      setCount(0)
+    }else{
+      setCount(count + 1)
+    }
   }
 
   const prevImg = () => {
-    setCount(count -1)
-    setCurrentPic(homeImgs[count])
+    if(count === 0){
+      setCount(homeImgs.length - 1)
+    } else {
+      setCount(count - 1)
+    }
   }
 
 
@@ -33,7 +39,7 @@ function Home() {
             <Button changePic={nextImg} />
           </div>
         <div id='homePage'>
-          <HomePage count={count} img={currentPic}/> 
+          <HomePage count={count} img={homeImgs}/> 
         </div>
       </MainLayout>
     </div>

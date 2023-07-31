@@ -2,11 +2,19 @@
 import React, { useState, useEffect } from 'react'
 import MainLayout from '../../layout/MainLayout'
 import Film from '../../components/Film'
-import StarSearch from '../../components/StarSearch'
+// import StarSearch from '../../components/StarSearch'
 // api
 import axios from 'axios'
 
+// try useContext
+import { useContext } from 'react'
+import { AppContext } from '../../contexts/app_context'
+
 function FilmList() {
+
+  let { all } = useContext(AppContext)
+
+  console.log("all the plot",all)
 
   // films
   const [films, setFilms] = useState([])
@@ -30,12 +38,10 @@ function FilmList() {
       setFilms(info.Search)
     }
 
-
     // let data;
     // data = await axios.get(`https://www.omdbapi.com/?s=star%20wars&apikey=6cfb8a83`);
     // console.log(data.data)
     // setFilms(data.data.results)
-
 
   }
   // useEffect
@@ -49,26 +55,23 @@ function FilmList() {
     return (
       <MainLayout>
         <hr />
-        <h1>FILMS HERE</h1>
         <div id='filmWrapper'>
           {/* testing */}
           <div className='filmBox'>
-            {/* <StarSearch searches={searches} setSearches={setSearches}/> */}
             <Film films={films}/>
           </div>
 
-          {/* {films} */}
-          {/* <div className='filmLeft'>
-          {
-            films.map((film, i)=>{
-              return <Film key={i}
-              film={film.title}
-              date={film.release_date}/>
-              // <h1 key={i}>{film.title}</h1>
-            })
-          }
-          </div> */}
-        <div id="movieDetails">Movie Info Here</div>
+          {/* appContext Attempt */}
+          {/* dont loop */}
+          {/* {all.map((one, i)=>{
+            console.log("individual films",one)
+            return(
+              <Film key={i} item={one}/> // *array of films
+            )
+          })} */}
+
+          
+              
         </div>
       </MainLayout>
     )

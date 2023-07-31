@@ -1,6 +1,6 @@
 const plot = [
     {
-        Title: "Star Wars: Episode IV - A New Hope",
+        Title: "Episode IV - A New Hope",
         Year: '1977',
         Rated: 'PG',
         Director: "George Lucas", 
@@ -8,7 +8,7 @@ const plot = [
         Plot: "Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee and two droids to save the galaxy from the Empire's world-destroying battle station, while also attempting to rescue Princess Leia from the mysterious Darth ..." 
     },
     {
-        Title: 'Star Wars: Episode V - The Empire Strikes Back',
+        Title: 'Episode V - The Empire Strikes Back',
         Year: '1980',
         Rated: 'PG',
         Director: 'Irvin Kershner',
@@ -16,7 +16,7 @@ const plot = [
         Plot: 'After the Rebels are overpowered by the Empire, Luke Skywalker begins his Jedi training with Yoda, while his friends are pursued across the galaxy by Darth Vader and bounty hunter Boba Fett.'
     },
     {
-        Title: 'Star Wars: Episode VI - Return of the Jedi',
+        Title: 'Episode VI - Return of the Jedi',
         Year: '1983',
         Rated: 'PG',
         Director: 'Richard Marquand',
@@ -24,7 +24,7 @@ const plot = [
         Plot: 'After rescuing Han Solo from Jabba the Hutt, the Rebels attempt to destroy the second Death Star, while Luke struggles to help Darth Vader back from the dark side.'
     },
     {
-        Title: 'Star Wars: Episode VII - The Force Awakens',
+        Title: 'Episode VII - The Force Awakens',
         Year: '2015',
         Rated: 'PG-13',
         Director: 'J.J. Abrams',
@@ -32,7 +32,7 @@ const plot = [
         Plot: 'As a new threat to the galaxy rises, Rey, a desert scavenger, and Finn, an ex-stormtrooper, must join Han Solo and Chewbacca to search for the one hope of restoring peace.'
     },
     {
-        Title: 'Star Wars: Episode I - The Phantom Menace',
+        Title: 'Episode I - The Phantom Menace',
         Year: '1999',
         Rated: 'PG',
         Director: 'George Lucas',
@@ -40,7 +40,7 @@ const plot = [
         Plot: 'Two Jedi escape a hostile blockade to find allies and come across a young boy who may bring balance to the Force, but the long dormant Sith resurface to claim their original glory.'
     },
     {
-        Title: 'Star Wars: Episode III - Revenge of the Sith',
+        Title: 'Episode III - Revenge of the Sith',
         Year: '2005',
         Rated: 'PG-13',
         Director: 'George Lucas',
@@ -48,7 +48,7 @@ const plot = [
         Plot: 'Three years into the Clone Wars, Obi-Wan pursues a new threat, while Anakin is lured by Chancellor Palpatine into a sinister plot to rule the galaxy.'
     },
     {
-        Title: 'Star Wars: Episode II - Attack of the Clones',
+        Title: 'Episode II - Attack of the Clones',
         Year: '2002',
         Rated: 'PG',
         Director: 'George Lucas',
@@ -64,7 +64,7 @@ const plot = [
         Plot: "In a time of conflict, a group of unlikely heroes band together on a mission to steal the plans to the Death Star, the Empire's ultimate weapon of destruction."
     },
     {
-        Title: 'Star Wars: Episode VIII - The Last Jedi',
+        Title: 'Episode VIII - The Last Jedi',
         Year: '2017',
         Rated: 'PG-13',
         Director: 'Rian Johnson',
@@ -72,7 +72,7 @@ const plot = [
         Plot: 'The Star Wars saga continues as new heroes and galactic legends go on an epic adventure, unlocking mysteries of the Force and shocking revelations of the past.'
     },
     {
-        Title: 'Star Wars: Episode IX - The Rise of Skywalker',
+        Title: 'Episode IX - The Rise of Skywalker',
         Year: '2019',
         Rated: 'PG-13',
         Director: 'J.J. Abrams',

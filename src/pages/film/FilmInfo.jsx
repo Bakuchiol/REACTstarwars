@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react'
 import MainLayout from '../../layout/MainLayout'
-import { useLocation } from 'react-router-dom'
-import plot from '../../models/plot'
+// useContext Attempt
+import { useContext } from 'react'
+import { AppContext } from '../../contexts/app_context'
 
 
-function FilmInfo(props) {
+function FilmInfo() {
+  // attempt useContext
+  let {movie} = useContext(AppContext)
 
-    const [filmInfo, setFilmInfo] = useState(plot[0])
-    let location = useLocation()
-    
-
+  console.log(movie.Title)
 
   return (
     <MainLayout>
-        <div>
+        <div className='oneMovieCard'>
+          <p>{movie.Title}</p>
       
         </div>
     </MainLayout>
